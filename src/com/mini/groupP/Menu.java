@@ -6,6 +6,8 @@ public class Menu {
 	
 	public static void main(String[] args) {
 		
+		System.out.println("welcome to ecommerse");
+		
 		Scanner sc=new Scanner(System.in);
 		System.out.println("--------Welcome to Shoping Mart----------");
 		System.out.println();
