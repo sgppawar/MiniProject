@@ -8,11 +8,21 @@ import java.util.Scanner;
 
 public class ProductDetails {
 	
+<<<<<<< HEAD
 	int Id=0;
 	
 	public static void productdetails(int Id)
 	{
 		PreparedStatement stmt=null;
+=======
+	public static void main(String[] args) {
+		ShowProduct();
+		ProductDetails.SelectProduct();
+	}
+	
+	public static void productdetails(int Id)
+	{PreparedStatement stmt=null;
+>>>>>>> main
 		try {
 		 stmt = Connections.connection().prepareStatement("select * from productdetails where productId='"+Id+"'");
 		 
@@ -52,7 +62,10 @@ public class ProductDetails {
 				count++;
 		 }		 
 		 System.out.println("Please entre product Number to see product Details");
+<<<<<<< HEAD
 		 SelectProduct();
+=======
+>>>>>>> main
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -93,6 +106,7 @@ public class ProductDetails {
 	}
 	}
 	
+<<<<<<< HEAD
 			
 	}
 	
@@ -120,6 +134,12 @@ public class ProductDetails {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+=======
+	
+	
+	
+	
+>>>>>>> main
 		
 	}
 
