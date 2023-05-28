@@ -3,7 +3,7 @@ package com.mini.groupP;
 import java.util.Scanner;
 
 public class Menu {
-	
+
 	public static void main(String[] args) {
 		
 		//commented line for PR
@@ -20,13 +20,14 @@ public class Menu {
 		
 		switch(choice) {
 		
-		case 1: System.out.println("Welcome user, Please select sub menu from below to proceed.");
-		
-		
+		case 1: //System.out.println("Welcome user, Please select sub menu from below to proceed.");
+		        UserDetails.userOption();
+		        ProductDetails.productdetailsAll();
 		        break;
 		        
 		case 2: System.out.println("Welcome Admin");
-		
+		        AdminUser.adminLogin();
+		        AdminUser.adminFunctions();
 		
 		        break;
 		        
@@ -35,21 +36,10 @@ public class Menu {
 				// System.out.println("Please select available option from below to proceed");
 				 System.out.println("13. View available stock");
 				 System.out.println("14.Not purchased item");
-				 System.out.println("Enter your option:");
-				 int option=sc.nextInt();
-				// public  usrChoice() 
-				 if(option==13) {
-					 System.out.println("Please visit below available product");
-					 ItemShowOnly.showProduct();
-				 } else if(option==14) {
-					 ViewProduct.product();
-				 }
-				 else {
-					 System.out.println("Wrong choice");
-					 System.out.println("Please choose from available (13,14)menu only");
-			 		 
+				Menu.usrChoice();
+				
 				 
-				 }
+				 
 				 
 				 break;
 				 
@@ -57,21 +47,28 @@ public class Menu {
 		 		  System.out.println("Please choose from available (1,2,3)menu only");
 		 		  main(null);
 		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		}
-		
-		
-		
-		
-	}
+	    }
 
+	}  
+
+	
+
+     public static  void usrChoice() {
+    	 System.out.println("Enter your option:");
+    	 Scanner sc=new Scanner(System.in);
+	     int option=sc.nextInt();
+         if(option==13) {
+	    // System.out.println("Please visit below available product");
+	     ItemShowOnly.showProduct();
+         } else if(option==14) {
+	         ViewProduct.product();
+           }
+          else {
+	      System.out.println("Wrong choice");
+	      System.out.println("Please choose from available (13,14)menu only");
+	      usrChoice();
+	
+      }
+	 
+     }
 }

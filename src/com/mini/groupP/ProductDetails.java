@@ -8,6 +8,13 @@ import java.util.Scanner;
 
 public class ProductDetails {
 	
+<<<<<<< HEAD
+	int Id=0;
+	
+	public static void productdetails(int Id)
+	{
+		PreparedStatement stmt=null;
+=======
 	public static void main(String[] args) {
 		ShowProduct();
 		ProductDetails.SelectProduct();
@@ -15,6 +22,7 @@ public class ProductDetails {
 	
 	public static void productdetails(int Id)
 	{PreparedStatement stmt=null;
+>>>>>>> main
 		try {
 		 stmt = Connections.connection().prepareStatement("select * from productdetails where productId='"+Id+"'");
 		 
@@ -54,6 +62,10 @@ public class ProductDetails {
 				count++;
 		 }		 
 		 System.out.println("Please entre product Number to see product Details");
+<<<<<<< HEAD
+		 SelectProduct();
+=======
+>>>>>>> main
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -94,10 +106,40 @@ public class ProductDetails {
 	}
 	}
 	
+<<<<<<< HEAD
+			
+	}
+	
+	public static void productdetailsAll()
+	{
+		PreparedStatement stmt=null;
+		try {
+		 stmt = Connections.connection().prepareStatement("select * from productdetails");
+		 
+		 ResultSet AllProducts = stmt.executeQuery();
+		 System.out.println(" Product");
+		 while(AllProducts.next())
+		 {
+			 
+			 System.out.println("Product ID="+AllProducts.getString(1)+" ");
+				System.out.println("ProductName="+AllProducts.getString(2)+" ");
+				System.out.println("ProductDescription="+AllProducts.getString(3)+" ");
+				System.out.println("AvailableQuantity="+AllProducts.getString(4)+" ");
+				System.out.println("Price="+AllProducts.getString(5)+" ");
+				System.out.println();
+				System.out.println("             ");
+		 }		 
+		 
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+=======
 	
 	
 	
 	
+>>>>>>> main
 		
 	}
 
